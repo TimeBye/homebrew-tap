@@ -3,10 +3,10 @@
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
 class AliyundriveCli < Formula
   desc "阿里云盘命令行客户端"
-  version "0.13.0"
+  version "0.13.1"
   homepage "https://github.com/chyroc/aliyundrive-cli"
-  url "https://ghproxy.com/github.com/chyroc/aliyundrive-cli/releases/download/v0.13.0/aliyundrive-cli_0.13.0_Darwin_x86_64.tar.gz"
-  sha256 "0a61cf44ae80ebc0c578f765e160e3effb8f28b4d24d67c41086901cf7f39dbd"
+  url "https://ghproxy.com/github.com/chyroc/aliyundrive-cli/releases/download/v0.13.1/aliyundrive-cli_0.13.1_Darwin_x86_64.tar.gz"
+  sha256 "9384683b23047dae7913bc49117713dd8d5e05868bb257497d2ea30c0b101707"
   license "Apache-2.0"
 
   # depends_on "cmake" => :build
