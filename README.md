@@ -14,6 +14,7 @@ homebrew-tap
 
 ```bash
 brew tap timebye/tap
+brew trust timebye/tap
 brew install <formula>
 ```
 

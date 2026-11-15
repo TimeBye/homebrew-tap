@@ -1,22 +1,13 @@
 class Mmh < Formula
   desc "Modular ssh toolkit"
-  version "1.6.0"
   homepage "https://github.com/TimeBye/mmh"
+  url "https://github.com/TimeBye/mmh/releases/download/v1.6.0/mmh_darwin_universal"
+  version "1.6.0"
+  sha256 "24a25dbf766de6e60daf52320c6e286c489e1e1282407caf34b3ff2ebb3b66a3"
   license "Apache-2.0"
 
-  on_intel do
-    url "https://github.com/TimeBye/mmh/releases/download/v1.6.0/mmh_darwin_amd64"
-    sha256 "4ed19f90b3cf8691f0eeedab45a5c1b5c0e00fe3160b6475e868458777d18594"
-  end
-
-  on_arm do
-    url "https://github.com/TimeBye/mmh/releases/download/v1.6.0/mmh_darwin_arm64"
-    sha256 "b0f3cb4786bfa33bbadf8f34a6b87bd33e4a302a0c6a34385b7d196da8fc09ed"
-  end
-
   def install
-    bin.install "mmh_darwin_arm64" => "mmh" if Hardware::CPU.arm?
-    bin.install "mmh_darwin_amd64" => "mmh" if Hardware::CPU.intel?
+    bin.install "mmh_darwin_universal" => "mmh"
     %w[mcp mcs mcx mec mgo mping mtun].each do |cmd|
       bin.install_symlink "mmh" => cmd
     end
