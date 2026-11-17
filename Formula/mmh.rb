@@ -1,17 +1,17 @@
 class Mmh < Formula
   desc "Modular ssh toolkit"
   homepage "https://github.com/TimeBye/mmh"
-  version "1.6.0"
+  version "1.7.0"
   license "Apache-2.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/TimeBye/mmh/releases/download/v1.6.0/mmh_darwin_arm64"
-      sha256 "b0f3cb4786bfa33bbadf8f34a6b87bd33e4a302a0c6a34385b7d196da8fc09ed"
+      url "https://github.com/TimeBye/mmh/releases/download/v1.7.0/mmh_darwin_arm64"
+      sha256 "ec0d27c1622d9d973a9670ee61c31ae26299f2bfb6d711af51c208b5a1570032"
     end
     on_intel do
-      url "https://github.com/TimeBye/mmh/releases/download/v1.6.0/mmh_darwin_amd64"
-      sha256 "4ed19f90b3cf8691f0eeedab45a5c1b5c0e00fe3160b6475e868458777d18594"
+      url "https://github.com/TimeBye/mmh/releases/download/v1.7.0/mmh_darwin_amd64"
+      sha256 "4f4b66bf41685acaf09013cc0a6278b6a451bba1ceaafbdd5c43d6d1d5eb0921"
     end
   end
 
@@ -26,7 +26,7 @@ class Mmh < Formula
   end
 
   test do
-    assert_match "v1.6.0", shell_output("#{bin}/mmh version")
+    assert_match "Version: v#{version}", shell_output("#{bin}/mmh version")
     assert_predicate bin/"mping", :symlink?
   end
 end
